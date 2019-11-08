@@ -55,8 +55,8 @@ end
 def make_coupons(coupons, cart)
   {
     :item => "#{coupons[:item]} W/COUPON",
-    :price => (coupons[:cost]/coupons[:num]).round(3)
-    :clearance => cart[:clearance]
+    :price => (coupons[:cost]/coupons[:num]).round(3),
+    :clearance => cart[:clearance],
     :count => coupons[:num]
   }
   
