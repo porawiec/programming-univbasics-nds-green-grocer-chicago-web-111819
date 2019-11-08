@@ -52,8 +52,10 @@ def consolidate_cart(cart)
 
 end
 
-def make_coupons(couponed_item)
-  
+def make_coupons(coupons, updated_cart)
+  applied_coupon => {
+    :item => 
+  }
   
 end
 
@@ -77,18 +79,18 @@ def apply_coupons(cart, coupons)
     #if cart item === coupon item && cart count > coupon num
       # cart item count - coupon num
       # updated_cart.push({ of the following new info})
-      # change name :item = "#{coupon_item} W/COUPON"
-      # change price :price = coupon :cost/ coupon :num .round(3)
-      # item :clearance = coupon :clearance
-      # change count :count = coupon :count
+        # change name :item = "#{coupon_item} W/COUPON"
+        # change price :price = coupon :cost/ coupon :num .round(3)
+        # item :clearance = coupon :clearance
+        # change count :count = coupon :count
     #end
       
     #if cart item === coupon item && cart count = coupon num
       # updated_cart.push({ of the following new info})
-      # change name :item = "#{coupon_item} W/COUPON"
-      # change price :price = coupon :cost/ coupon :num .round(3)
-      # item :clearance = coupon :clearance
-      # change count :count = coupon :count
+        # change name :item = "#{coupon_item} W/COUPON"
+        # change price :price = coupon :cost/ coupon :num .round(3)
+        # item :clearance = coupon :clearance
+        # change count :count = coupon :count
     #end
     
     row_index += 1
