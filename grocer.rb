@@ -82,7 +82,7 @@ def apply_coupons(cart, coupons)
     cart_count = cart[row_index][:count]
     
     if cart_item  === find_coupon_item && cart_count > coupon_num
-      # cart item count - coupon num
+      # cart_count - coupon_num
       # updated_cart.push({ of the following new info})
         # change name :item = "#{coupon_item} W/COUPON"
         # change price :price = coupon :cost/ coupon :num .round(3)
@@ -90,7 +90,7 @@ def apply_coupons(cart, coupons)
         # change count :count = coupon :count
     #end
       
-    #if cart item === coupon item && cart count = coupon num
+    if cart_item  === find_coupon_item && cart_count = coupon_num
       # updated_cart.push({ of the following new info})
         # change name :item = "#{coupon_item} W/COUPON"
         # change price :price = coupon :cost/ coupon :num .round(3)
