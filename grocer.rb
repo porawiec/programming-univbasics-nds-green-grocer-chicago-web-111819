@@ -52,9 +52,12 @@ def consolidate_cart(cart)
 
 end
 
-def make_coupons(coupons, updated_cart)
-  applied_coupon => {
-    :item => 
+def make_coupons(coupons, cart)
+  {
+    :item => "#{coupons[:item]} W/COUPON",
+    :price => (coupons[:cost]/coupons[:num]).round(3)
+    :clearance => cart[:clearance]
+    :count => coupons[:num]
   }
   
 end
@@ -63,7 +66,7 @@ def apply_coupons(cart, coupons)
 
   pp cart
   pp coupons
-=begin  
+
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
@@ -74,7 +77,7 @@ def apply_coupons(cart, coupons)
     coupon_item = coupons[row_index][:item]
     coupon_num = coupons[row_index][:num]
     coupon_cost = coupons[row_index][:cost]
-    coupon_item = find_item_by_name_in_collection(coupons[row_index][:item], cart)
+    find_coupon_item = find_item_by_name_in_collection(coupon_item, cart)
     
     #if cart item === coupon item && cart count > coupon num
       # cart item count - coupon num
@@ -97,7 +100,7 @@ def apply_coupons(cart, coupons)
   end
   
   updated_cart
-=end
+
 end
 
 def apply_clearance(cart)
