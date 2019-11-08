@@ -92,6 +92,7 @@ def apply_coupons(cart, coupons)
     #end
       
     if cart_item  === find_coupon_item && cart_count = coupon_num
+      
       # updated_cart.push({ of the following new info})
         # change name :item = "#{coupon_item} W/COUPON"
         # change price :price = coupon :cost/ coupon :num .round(3)
