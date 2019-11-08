@@ -82,6 +82,7 @@ def apply_coupons(cart, coupons)
     cart_count = cart[row_index][:count]
     
     if cart_item  === find_coupon_item && cart_count > coupon_num
+      p "hello"
       updated_cart[row_index][:count] -= coupon_num
       updated_cart.push(make_coupons(coupons, cart))
     end
