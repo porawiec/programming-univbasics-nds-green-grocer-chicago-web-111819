@@ -80,9 +80,9 @@ def apply_coupons(cart, coupons)
     find_coupon_item = find_item_by_name_in_collection(coupons[row_index], cart)
     cart_item = cart[row_index][:item]
     cart_count = cart[row_index][:count]
-    p "hello"
-    if cart_item  === find_coupon_item && cart_count > coupon_num
 
+    if cart_item  === find_coupon_item && cart_count > coupon_num
+      p "hello"
       updated_cart[row_index][:count] -= coupon_num
       updated_cart.push(make_coupons(coupons[row_index], cart))
     end
