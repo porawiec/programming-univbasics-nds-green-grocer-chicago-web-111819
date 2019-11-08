@@ -78,8 +78,10 @@ def apply_coupons(cart, coupons)
     coupon_num = coupons[row_index][:num]
     coupon_cost = coupons[row_index][:cost]
     find_coupon_item = find_item_by_name_in_collection(coupon_item, cart)
+    cart_item = cart[row_index][:item]
+    cart_count = cart[row_index][:count]
     
-    #if cart item === coupon item && cart count > coupon num
+    if cart_item  === find_coupon_item && cart_count > coupon_num
       # cart item count - coupon num
       # updated_cart.push({ of the following new info})
         # change name :item = "#{coupon_item} W/COUPON"
