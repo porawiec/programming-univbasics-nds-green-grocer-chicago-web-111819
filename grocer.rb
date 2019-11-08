@@ -52,7 +52,8 @@ def consolidate_cart(cart)
 
 end
 
-def make_coupons (x)
+def make_coupons(couponed_item)
+  
   
 end
 
