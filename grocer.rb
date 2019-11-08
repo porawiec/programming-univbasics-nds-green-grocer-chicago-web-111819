@@ -89,7 +89,7 @@ def apply_coupons(cart, coupons)
         # change price :price = coupon :cost/ coupon :num .round(3)
         # item :clearance = coupon :clearance
         # change count :count = coupon :count
-    #end
+    end
       
     if cart_item  === find_coupon_item && cart_count = coupon_num
       updated_cart.slice!(row_index)
@@ -99,7 +99,7 @@ def apply_coupons(cart, coupons)
         # change price :price = coupon :cost/ coupon :num .round(3)
         # item :clearance = coupon :clearance
         # change count :count = coupon :count
-    #end
+    end
     
     row_index += 1
   end
