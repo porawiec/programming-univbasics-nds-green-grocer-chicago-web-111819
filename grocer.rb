@@ -71,7 +71,7 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   
-  updated_cart =[]
+  updated_cart = cart
   row_index = 0
   while row_index < coupons.length do
     coupon_item = coupons[row_index][:item]
@@ -82,7 +82,8 @@ def apply_coupons(cart, coupons)
     cart_count = cart[row_index][:count]
     
     if cart_item  === find_coupon_item && cart_count > coupon_num
-      # cart_count - coupon_num
+      updated_cart[row_index][:count] -= coupon_num
+      updated_cart.push(make_coupons(coupons, cart))
       # updated_cart.push({ of the following new info})
         # change name :item = "#{coupon_item} W/COUPON"
         # change price :price = coupon :cost/ coupon :num .round(3)
