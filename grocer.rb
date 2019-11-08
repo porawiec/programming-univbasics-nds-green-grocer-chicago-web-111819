@@ -77,7 +77,7 @@ def apply_coupons(cart, coupons)
     coupon_item = coupons[row_index][:item]
     coupon_num = coupons[row_index][:num]
     coupon_cost = coupons[row_index][:cost]
-    find_coupon_item = find_item_by_name_in_collection(coupons[:item], cart)
+    find_coupon_item = find_item_by_name_in_collection(coupons, cart)
     cart_item = cart[row_index][:item]
     cart_count = cart[row_index][:count]
     p "hello"
